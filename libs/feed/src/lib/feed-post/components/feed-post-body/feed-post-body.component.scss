@@ -9,8 +9,9 @@
   &__tags {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 15px;
-    &__link {
+    align-items: center;
+    margin: 20px 0;
+    &-link {
       padding-right: 15px;
     }
   }
