@@ -9,6 +9,8 @@
     background-color: #ffffff;
     padding: 0 20px;
     margin: 20px;
-    width: 50%;
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+    }
   }
 }
