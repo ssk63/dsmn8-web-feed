@@ -1,7 +1,14 @@
 .feed-post {
-  border: 1px solid #eceef1;
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 0 20px;
-  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__item {
+    border: 1px solid #eceef1;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 0 20px;
+    margin: 20px;
+    width: 50%;
+  }
 }

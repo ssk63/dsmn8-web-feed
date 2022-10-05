@@ -37,6 +37,8 @@ export const mockFeedPosts: FeedPostEntity[] = [
       shares: 0,
       totalReach: 5307,
     },
+    imgUrl:
+      'https://dsmn8.imgix.net/dsmn8/image/PcdTvyy0wRnhpaC5sCEjXbgca.jpeg?w=1200',
   },
   {
     content: `LET ME SET THE SCENE
@@ -68,5 +70,7 @@ export const mockFeedPosts: FeedPostEntity[] = [
       shares: 0,
       totalReach: 10345,
     },
+    imgUrl:
+      'https://dsmn8.imgix.net/dsmn8/image/fAaQgnEdem12gnQcujVX0g53V.jpeg?w=1200',
   },
 ];

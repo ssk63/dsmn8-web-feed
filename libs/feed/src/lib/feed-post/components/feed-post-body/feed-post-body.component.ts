@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'dsmn8-feed-post-body',
@@ -6,4 +6,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./feed-post-body.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class FeedPostBodyComponent {}
+export class FeedPostBodyComponent {
+  @Input() name: string | undefined;
+  @Input() content: string | undefined;
+  @Input() imgUrl: string | undefined;
+}

@@ -1,6 +1,14 @@
 <div class="feed-post">
-  <dsmn8-feed-post-header></dsmn8-feed-post-header>
-  <div class="feed-post__actions"></div>
-  <dsmn8-feed-post-body></dsmn8-feed-post-body>
-  <dsmn8-feed-post-footer></dsmn8-feed-post-footer>
+  <div class="feed-post__item" *ngFor="let feedPost of feedPosts$ | async">
+    <dsmn8-feed-post-header [text]="feedPost?.text"></dsmn8-feed-post-header>
+    <div class="feed-post__actions"></div>
+    <dsmn8-feed-post-body
+      [name]="feedPost?.name"
+      [content]="feedPost?.content"
+      [imgUrl]="feedPost?.imgUrl"
+    ></dsmn8-feed-post-body>
+    <dsmn8-feed-post-footer
+      [metrics]="feedPost?.boostPostMetrics"
+    ></dsmn8-feed-post-footer>
+  </div>
 </div>
