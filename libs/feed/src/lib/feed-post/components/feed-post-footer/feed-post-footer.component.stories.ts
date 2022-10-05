@@ -1,4 +1,5 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { mockFeedPosts } from '../../models';
 import { FeedPostFooterComponent } from './feed-post-footer.component';
 
 export default {
@@ -18,4 +19,6 @@ const Template: Story<FeedPostFooterComponent> = (
 });
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  metrics: mockFeedPosts[0].boostPostMetrics,
+};

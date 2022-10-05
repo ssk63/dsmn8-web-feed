@@ -1,4 +1,5 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { mockFeedPosts } from '../../models';
 import { FeedPostHeaderComponent } from './feed-post-header.component';
 
 export default {
@@ -18,4 +19,6 @@ const Template: Story<FeedPostHeaderComponent> = (
 });
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  text: mockFeedPosts[0].text
+};
