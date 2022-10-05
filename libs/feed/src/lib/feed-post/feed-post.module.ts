@@ -1,10 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FeedPostContainerComponent } from './components';
+import {
+  FeedPostActionsComponent,
+  FeedPostBodyComponent,
+  FeedPostContainerComponent,
+  FeedPostFooterComponent,
+  FeedPostHeaderComponent,
+} from './components';
 
 @NgModule({
-  declarations: [FeedPostContainerComponent],
+  declarations: [
+    FeedPostContainerComponent,
+    FeedPostHeaderComponent,
+    FeedPostBodyComponent,
+    FeedPostActionsComponent,
+    FeedPostFooterComponent,
+  ],
   imports: [CommonModule],
-  exports: [FeedPostContainerComponent]
+  exports: [FeedPostContainerComponent],
 })
 export class FeedPostModule {}
