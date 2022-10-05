@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'dsmn8-feed-post-actions',
@@ -6,8 +6,4 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./feed-post-actions.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class FeedPostActionsComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class FeedPostActionsComponent {}

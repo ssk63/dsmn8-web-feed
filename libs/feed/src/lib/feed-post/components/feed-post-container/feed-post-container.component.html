@@ -1,7 +1,7 @@
 <div class="feed-post">
   <div class="feed-post__item" *ngFor="let feedPost of feedPosts$ | async">
     <dsmn8-feed-post-header [text]="feedPost?.text"></dsmn8-feed-post-header>
-    <div class="feed-post__actions"></div>
+    <dsmn8-feed-post-actions></dsmn8-feed-post-actions>
     <dsmn8-feed-post-body
       [name]="feedPost?.name"
       [content]="feedPost?.content"
