@@ -1,4 +1,5 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { mockFeedPosts } from '../../models';
 import { FeedPostBodyComponent } from './feed-post-body.component';
 
 export default {
@@ -18,4 +19,8 @@ const Template: Story<FeedPostBodyComponent> = (
 });
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  name: mockFeedPosts[0].name,
+  content: mockFeedPosts[0].content,
+  imgUrl: mockFeedPosts[0].imgUrl,
+};

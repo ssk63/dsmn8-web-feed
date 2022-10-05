@@ -1,4 +1,5 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { likeBtnLabel, reshareBtnLabel } from '../../models';
 import { FeedPostActionsComponent } from './feed-post-actions.component';
 
 export default {
@@ -18,4 +19,7 @@ const Template: Story<FeedPostActionsComponent> = (
 });
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  likesButtonLabel: likeBtnLabel,
+  reshareButtonLabel: reshareBtnLabel,
+};

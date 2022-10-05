@@ -6,7 +6,7 @@ import {
   getAllFeedPost,
   initFeedPost,
 } from '../../+state';
-import { FeedPostEntity } from '../../models';
+import { FeedPostEntity, likeBtnLabel, reshareBtnLabel } from '../../models';
 
 @Component({
   selector: 'dsmn8-feed-post-container',
@@ -16,6 +16,8 @@ import { FeedPostEntity } from '../../models';
 })
 export class FeedPostContainerComponent implements OnInit {
   feedPosts$: Observable<FeedPostEntity[]> | undefined;
+  likesBtnLabel: string = likeBtnLabel;
+  reshareBtnLabel: string = reshareBtnLabel;
 
   constructor(private store: Store<FeedPostPartialState>) {}
 
