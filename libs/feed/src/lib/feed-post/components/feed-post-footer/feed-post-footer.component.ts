@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { IMetrics } from '../../models';
 
 @Component({
   selector: 'dsmn8-feed-post-footer',
@@ -6,4 +7,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./feed-post-footer.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class FeedPostFooterComponent {}
+export class FeedPostFooterComponent {
+  @Input() metrics: IMetrics | undefined;
+}

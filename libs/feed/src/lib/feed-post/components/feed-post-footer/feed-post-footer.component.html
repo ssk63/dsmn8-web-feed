@@ -1,7 +1,7 @@
 <div class="feed-post-footer">
-  <p class="views-count">Audience size: 10,392</p>
+  <p class="views-count">Audience size: {{ metrics?.totalReach }}</p>
   <div class="feed-post-footer__counts">
-    <p class="likes-count">7 likes</p>
-    <p class="reshares-count">0 reshares</p>
+    <p class="likes-count">{{ metrics?.likes }} likes</p>
+    <p class="reshares-count">{{ metrics?.shares }} reshares</p>
   </div>
 </div>

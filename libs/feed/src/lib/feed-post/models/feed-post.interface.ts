@@ -7,6 +7,7 @@ export interface FeedPostEntity {
   content: string;
   text: string;
   boostPostMetrics: IMetrics;
+  imgUrl: string;
 }
 
 export interface IMetrics {
