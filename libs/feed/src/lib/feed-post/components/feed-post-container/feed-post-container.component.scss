@@ -1,0 +1,47 @@
+.feed-post {
+  border: 1px solid #eceef1;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  &__body {
+    border: 1px solid #eceef1;
+    border-radius: 10px;
+    &-header,
+    &-content,
+    &-tags {
+      padding: 0 20px;
+    }
+    &-tags {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      &__link {
+        padding-right: 15px;
+      }
+    }
+    &-image {
+      display: flex;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    color: rgba(73, 73, 73, 0.5);
+    p {
+      margin-bottom: 0;
+    }
+    &-counts {
+      @extend .feed-post__footer;
+      .likes-count {
+        padding-right: 15px;
+      }
+    }
+  }
+}
