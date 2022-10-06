@@ -1,28 +1,62 @@
-
-
 # Dsmn8
 
 This project was generated using [Nx](https://nx.dev).
 
-## Development server
+# Pre-requisites
 
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Install NodeJS from [https://nodejs.org](https://nodejs.org)
 
-## Build
+# Cloning the Code
 
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Clone the code using the following command
 
-## Running unit tests
+```bash
+git clone https://github.com/ssk63/dsmn8-web-feed.git
+```
 
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+# Running the Application
 
-Run `nx affected:test` to execute the unit tests affected by a change.
+Install the npm packages using the following command
 
-## Understand your workspace
+```bash
+npm install
+```
 
-Run `nx graph` to see a diagram of the dependencies of your projects.
+Start the application using the following command
 
-## Further help
+```bash
+ng serve web
+```
 
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+The application runs on **http://localhost:4200/**
 
+## Setup JSON Server For Fake GraphQL Endpoint
+
+First Install the JSON GraphQL server globally. Run the following command
+
+```bash
+sudo npm install -g json-graphql-server
+```
+
+Then start the GraphQL server. Run the following command in the terminal.
+
+```bash
+npm run graphql
+```
+
+Navigate to http://localhost:5000/.
+
+**Example GraphQL allPosts query:**
+
+```
+query {
+    allPosts {
+      id
+      name
+      content
+      text
+      boostPostMetrics
+      imgUrl
+    }
+  }
+```
