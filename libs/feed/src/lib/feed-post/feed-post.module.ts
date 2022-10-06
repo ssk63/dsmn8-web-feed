@@ -8,6 +8,7 @@ import {
   FeedPostHeaderComponent,
 } from './components';
 import { FeedPostService } from './services';
+import { ButtonComponent } from '@dsmn8/shared';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FeedPostService } from './services';
     FeedPostBodyComponent,
     FeedPostActionsComponent,
     FeedPostFooterComponent,
+    ButtonComponent
   ],
   imports: [CommonModule],
   exports: [FeedPostContainerComponent],

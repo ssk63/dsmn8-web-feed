@@ -1,0 +1,24 @@
+$primary: #e85427;
+$primary-light: #fb7147;
+
+.dsmn8-btn {
+  &--primary {
+    border-color: $primary;
+    background-color: $primary;
+    color: #ffffff;
+    &:hover {
+      border-color: $primary-light;
+      background-color: $primary-light;
+    }
+  }
+  border: solid 1px #eceef1;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #494949;
+  padding: 12px 30px;
+  margin-bottom: 20px;
+  transition-duration: 0.5s;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}

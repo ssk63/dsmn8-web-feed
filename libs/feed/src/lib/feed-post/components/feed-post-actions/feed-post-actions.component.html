@@ -1,16 +1,4 @@
 <div class="feed-post-actions">
-  <button
-    class="feed-post-actions__like"
-    type="button"
-    *ngIf="likesButtonLabel"
-  >
-    {{ likesButtonLabel }}
-  </button>
-  <button
-    class="feed-post-actions__share"
-    type="button"
-    *ngIf="reshareButtonLabel"
-  >
-    {{ reshareButtonLabel }}
-  </button>
+  <dsmn8-button [label]="likesButtonLabel"></dsmn8-button>
+  <dsmn8-button [label]="reshareButtonLabel"></dsmn8-button>
 </div>

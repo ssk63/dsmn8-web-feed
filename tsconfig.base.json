@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dsmn8/feed": ["libs/feed/src/index.ts"]
+      "@dsmn8/feed": ["libs/feed/src/index.ts"],
+      "@dsmn8/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
