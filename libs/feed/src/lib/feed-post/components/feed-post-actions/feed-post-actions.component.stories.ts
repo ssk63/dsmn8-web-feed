@@ -1,4 +1,5 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { ButtonComponent } from '@dsmn8/shared';
 import { likeBtnLabel, reshareBtnLabel } from '../../models';
 import { FeedPostActionsComponent } from './feed-post-actions.component';
 
@@ -8,6 +9,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
+      declarations: [ButtonComponent]
     }),
   ],
 } as Meta<FeedPostActionsComponent>;

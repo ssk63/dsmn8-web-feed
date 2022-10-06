@@ -10,5 +10,4 @@ export class ButtonComponent {
   @Input() label: string | undefined;
   @Input() ariaLabel: string | undefined;
   @Input() isPrimary = true;
-  @Input() isDisabled = false;
 }
