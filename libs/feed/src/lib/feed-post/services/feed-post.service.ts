@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { map, Observable } from 'rxjs';
+import { ApolloError } from '@apollo/client';
+import { catchError, map, Observable, throwError } from 'rxjs';
 import { FeedPostEntity } from '../models';
 import { GET_ALL_FEED_POSTS } from './queries/feed-post.queries';
 
@@ -12,9 +13,16 @@ export class FeedPostService {
 
   getFeedPosts(): Observable<FeedPostEntity[]> {
     return this.apollo
-      .watchQuery<{ allPosts: FeedPostEntity[] }>({
+      .query<{ allPosts: FeedPostEntity[] }>({
         query: GET_ALL_FEED_POSTS,
       })
-      .valueChanges.pipe(map((result) => result?.data?.allPosts));
+      .pipe(
+        map((result): FeedPostEntity[] => result?.data?.allPosts),
+        catchError(this.handleError)
+      );
   }
+
+  handleError = ({ message }: ApolloError) => {
+    return throwError(() => new Error(message));
+  };
 }
