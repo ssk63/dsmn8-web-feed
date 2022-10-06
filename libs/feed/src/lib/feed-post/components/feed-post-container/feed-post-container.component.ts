@@ -1,12 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import {
-  FeedPostPartialState,
-  getAllFeedPost,
-  initFeedPost,
-} from '../../+state';
 import { FeedPostEntity, likeBtnLabel, reshareBtnLabel } from '../../models';
+import { FeedPostService } from '../../services';
 
 @Component({
   selector: 'dsmn8-feed-post-container',
@@ -19,10 +14,9 @@ export class FeedPostContainerComponent implements OnInit {
   likesBtnLabel: string = likeBtnLabel;
   reshareBtnLabel: string = reshareBtnLabel;
 
-  constructor(private store: Store<FeedPostPartialState>) {}
+  constructor(private feedPostService: FeedPostService) {}
 
   ngOnInit(): void {
-    this.store.dispatch(initFeedPost());
-    this.feedPosts$ = this.store.select(getAllFeedPost);
+    this.feedPosts$ = this.feedPostService.getFeedPosts();
   }
 }

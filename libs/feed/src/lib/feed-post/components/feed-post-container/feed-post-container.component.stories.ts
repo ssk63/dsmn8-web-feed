@@ -1,11 +1,4 @@
-import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
-import {
-  FeedPostEffects,
-  feedPostReducer,
-  FEED_POST_FEATURE_KEY,
-} from '../../+state';
 import { FeedPostService } from '../../services';
 import { FeedPostActionsComponent } from '../feed-post-actions/feed-post-actions.component';
 import { FeedPostBodyComponent } from '../feed-post-body/feed-post-body.component';
@@ -23,12 +16,6 @@ export default {
         FeedPostBodyComponent,
         FeedPostActionsComponent,
         FeedPostFooterComponent,
-      ],
-      imports: [
-        StoreModule.forRoot([]),
-        EffectsModule.forRoot([]),
-        StoreModule.forFeature(FEED_POST_FEATURE_KEY, feedPostReducer),
-        EffectsModule.forFeature([FeedPostEffects]),
       ],
       providers: [FeedPostService],
     }),
