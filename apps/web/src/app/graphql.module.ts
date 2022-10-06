@@ -4,15 +4,18 @@ import { ApolloClientOptions, InMemoryCache } from '@apollo/client/core';
 import { HttpLink } from 'apollo-angular/http';
 
 const uri = 'http://localhost:5000/';
-export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
+
+export const createApollo = (httpLink: HttpLink): ApolloClientOptions<any> => {
   return {
     link: httpLink.create({ uri }),
     cache: new InMemoryCache(),
-    headers: {
-      'Access-Control-Allow-Origin': '*',
+    defaultOptions: {
+      query: {
+        fetchPolicy: 'no-cache',
+      },
     },
   };
-}
+};
 
 @NgModule({
   exports: [ApolloModule],
