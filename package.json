@@ -8,8 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "web:storybook": "nx run feed:storybook",
-    "feed:storybook": "nx run feed:storybook"
+    "storybook": "start-storybook -p 4400"
   },
   "private": true,
   "dependencies": {
