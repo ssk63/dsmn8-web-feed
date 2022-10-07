@@ -2,7 +2,7 @@ import { gql } from 'apollo-angular';
 
 export const GET_ALL_FEED = gql`
   query {
-    allPosts {
+    allFeeds {
       id
       name
       content
