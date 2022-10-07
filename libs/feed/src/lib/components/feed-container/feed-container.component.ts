@@ -17,6 +17,6 @@ export class FeedContainerComponent implements OnInit {
   constructor(private feedService: FeedService) {}
 
   ngOnInit(): void {
-    this.feeds$ = this.feedService.getFeedPosts();
+    this.feeds$ = this.feedService.getAllFeeds();
   }
 }
