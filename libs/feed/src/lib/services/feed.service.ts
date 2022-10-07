@@ -18,11 +18,9 @@ export class FeedService {
       })
       .pipe(
         map((result): FeedEntity[] => result?.data?.allFeeds),
-        catchError(this.handleError)
+        catchError((error: ApolloError) =>
+          throwError(() => new Error(error?.message))
+        )
       );
   }
-
-  handleError = ({ message }: ApolloError) => {
-    return throwError(() => new Error(message));
-  };
 }
