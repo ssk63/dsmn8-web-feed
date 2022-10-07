@@ -11,13 +11,13 @@ import { GET_ALL_FEED } from './queries/feed.queries';
 export class FeedService {
   constructor(private apollo: Apollo) {}
 
-  getFeedPosts(): Observable<FeedEntity[]> {
+  getAllFeeds(): Observable<FeedEntity[]> {
     return this.apollo
-      .query<{ allPosts: FeedEntity[] }>({
+      .query<{ allFeeds: FeedEntity[] }>({
         query: GET_ALL_FEED,
       })
       .pipe(
-        map((result): FeedEntity[] => result?.data?.allPosts),
+        map((result): FeedEntity[] => result?.data?.allFeeds),
         catchError(this.handleError)
       );
   }
