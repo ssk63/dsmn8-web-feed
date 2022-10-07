@@ -5,6 +5,6 @@ describe('feed', () => {
     )
   );
   it('should render the component', () => {
-    cy.get('dsmn8-feed-post-body').should('exist');
+    cy.get('dsmn8-feed-body').should('exist');
   });
 });

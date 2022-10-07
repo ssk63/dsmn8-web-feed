@@ -41,7 +41,7 @@ sudo npm install -g json-graphql-server
 Then start the GraphQL server. Run the following command in the terminal.
 
 ```bash
-npm run graphql
+npm run graphql-server
 ```
 
 Navigate to http://localhost:5000/.

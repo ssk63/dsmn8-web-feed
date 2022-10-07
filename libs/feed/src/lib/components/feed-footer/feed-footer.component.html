@@ -1,0 +1,13 @@
+<div class="feed-footer">
+  <p class="views-count" *ngIf="metrics?.totalReach">
+    Audience size: {{ metrics?.totalReach }}
+  </p>
+  <div class="feed-footer__details">
+    <p class="feed-footer__details-likes" *ngIf="metrics?.likes">
+      {{ metrics?.likes }} likes
+    </p>
+    <p class="feed-footer__details-reshares" *ngIf="metrics?.shares">
+      {{ metrics?.shares }} reshares
+    </p>
+  </div>
+</div>
