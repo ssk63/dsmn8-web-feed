@@ -9,7 +9,7 @@
     "build": "nx build",
     "test": "nx test",
     "storybook": "start-storybook -p 4400",
-    "graphql": "json-graphql-server graphql-server.json --p 5000"
+    "graphql-server": "json-graphql-server graphql-server.json --p 5000"
   },
   "private": true,
   "dependencies": {

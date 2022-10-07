@@ -3,6 +3,6 @@ describe('feed', () => {
     cy.visit('/iframe.html?id=feedpostheadercomponent--primary&args=text;')
   );
   it('should render the component', () => {
-    cy.get('dsmn8-feed-post-header').should('exist');
+    cy.get('dsmn8-feed-header').should('exist');
   });
 });

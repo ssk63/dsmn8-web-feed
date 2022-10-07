@@ -1,0 +1,17 @@
+<div class="feed">
+  <div class="feed-item" *ngFor="let feed of feeds$ | async">
+    <dsmn8-feed-header [text]="feed?.text"></dsmn8-feed-header>
+    <dsmn8-feed-actions
+      [likesButtonLabel]="likesBtnLabel"
+      [reshareButtonLabel]="reshareBtnLabel"
+    ></dsmn8-feed-actions>
+    <dsmn8-feed-body
+      [name]="feed?.name"
+      [content]="feed?.content"
+      [imgUrl]="feed?.imgUrl"
+    ></dsmn8-feed-body>
+    <dsmn8-feed-footer
+      [metrics]="feed?.boostPostMetrics"
+    ></dsmn8-feed-footer>
+  </div>
+</div>
