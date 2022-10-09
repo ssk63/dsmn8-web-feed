@@ -8,7 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "storybook": "start-storybook -p 4400",
+    "storybook": "nx run storybook:storybook",
     "graphql-server": "json-graphql-server graphql-server.json --p 5000"
   },
   "private": true,
