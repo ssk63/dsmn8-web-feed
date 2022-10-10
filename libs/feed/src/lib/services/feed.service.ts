@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import { ApolloError } from '@apollo/client';
 import { catchError, map, Observable, throwError } from 'rxjs';
-import { FeedEntity } from '../models';
+import { IFeed } from '../models';
 import { GET_ALL_FEED } from './queries/feed.queries';
 
 @Injectable({
@@ -11,13 +11,13 @@ import { GET_ALL_FEED } from './queries/feed.queries';
 export class FeedService {
   constructor(private apollo: Apollo) {}
 
-  getAllFeeds(): Observable<FeedEntity[]> {
+  getAllFeeds(): Observable<IFeed[]> {
     return this.apollo
-      .query<{ allFeeds: FeedEntity[] }>({
+      .query<{ allFeeds: IFeed[] }>({
         query: GET_ALL_FEED,
       })
       .pipe(
-        map((result): FeedEntity[] => result?.data?.allFeeds),
+        map((result): IFeed[] => result?.data?.allFeeds),
         catchError((error: ApolloError) =>
           throwError(() => new Error(error?.message))
         )

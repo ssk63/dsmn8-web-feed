@@ -1,4 +1,5 @@
-export interface FeedEntity {
+export interface IFeed {
+  __typename: string;
   id: string | number;
   name: string;
   content: string;
