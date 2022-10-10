@@ -1,4 +1,10 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   selector: 'dsmn8-button',
@@ -9,5 +15,11 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 export class ButtonComponent {
   @Input() label: string | undefined;
   @Input() ariaLabel: string | undefined;
-  @Input() isPrimary = true;
+  @Input() isPrimary: boolean | undefined;
+  @Input() isDisabled: boolean | undefined;
+  @Output() clicked = new EventEmitter<boolean>();
+
+  onBtnClick(): void {
+    this.clicked.emit(true);
+  }
 }

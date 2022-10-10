@@ -1,24 +1,33 @@
 $primary: #e85427;
 $primary-light: #fb7147;
+$grey: #455a76;
+$white: #ffffff;
 
 .dsmn8-btn {
   &--primary {
     border-color: $primary;
     background-color: $primary;
-    color: #ffffff;
+    color: $white;
     &:hover {
       border-color: $primary-light;
       background-color: $primary-light;
     }
   }
+  &[disabled] {
+    background-color: $grey;
+    border-color: $grey;
+    color: $white;
+    opacity: 0.38;
+    cursor: default;
+  }
   border: solid 1px #eceef1;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: $white;
   color: #494949;
   padding: 12px 30px;
   margin-bottom: 20px;
   transition-duration: 0.5s;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  min-width: 160px;
 }
