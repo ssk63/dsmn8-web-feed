@@ -9,8 +9,12 @@ import { FeedFooterComponent } from '../feed-footer/feed-footer.component';
 import { FeedHeaderComponent } from '../feed-header/feed-header.component';
 import { FeedContainerComponent } from './feed-container.component';
 import { ButtonComponent } from '@dsmn8/shared';
-import { createStorybookApolloMock, mockFeed } from '../../models';
-
+import {
+  createStorybookApolloMock,
+  mockFeed,
+  likeBtnLabel,
+  reshareBtnLabel,
+} from '../../models';
 @Injectable()
 class FeedServiceMock {
   getAllFeeds() {
@@ -52,6 +56,34 @@ export default {
       ],
     }),
   ],
+  argTypes: {
+    likesBtnLabel: {
+      name: 'likesBtnLabel',
+      description: 'Sets the like button text.',
+      defaultValue: likeBtnLabel,
+      control: {
+        type: 'text',
+      },
+    },
+    reshareBtnLabel: {
+      name: 'reshareBtnLabel',
+      description: 'Sets the reshare button text.',
+      defaultValue: reshareBtnLabel,
+      control: {
+        type: 'text',
+      },
+    },
+    onLikesBtnClicked: {
+      description:
+        'Perform the likes operation when the likes button is clicked.',
+      action: 'onLikesBtnClicked',
+    },
+    onReshareBtnClicked: {
+      description:
+        'Perform the reshare operation when the reshare button is clicked.',
+      action: 'onReshareBtnClicked',
+    },
+  },
 } as Meta<FeedContainerComponent>;
 
 const Template: Story<FeedContainerComponent> = (
@@ -60,5 +92,5 @@ const Template: Story<FeedContainerComponent> = (
   props: args,
 });
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const FeedPost = Template.bind({});
+FeedPost.args = {};

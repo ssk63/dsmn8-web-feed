@@ -4,6 +4,8 @@
     <dsmn8-feed-actions
       [likesButtonLabel]="likesBtnLabel"
       [reshareButtonLabel]="reshareBtnLabel"
+      (likesBtnClicked)="onLikesBtnClicked(feed)"
+      (reshareBtnClicked)="onReshareBtnClicked(feed)"
     ></dsmn8-feed-actions>
     <dsmn8-feed-body
       [name]="feed?.name"
