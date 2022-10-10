@@ -5,6 +5,7 @@ export interface FeedEntity {
   text: string;
   boostPostMetrics: IMetrics;
   imgUrl: string;
+  isShared: boolean;
 }
 
 export interface IMetrics {

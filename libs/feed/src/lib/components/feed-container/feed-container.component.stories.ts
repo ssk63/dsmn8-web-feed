@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
 import { Operation } from '@apollo/client';
-import { of } from 'rxjs';
+import { Apollo } from 'apollo-angular';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { FeedService } from '../../services';
 import { FeedActionsComponent } from '../feed-actions/feed-actions.component';
@@ -15,12 +14,7 @@ import {
   likeBtnLabel,
   reshareBtnLabel,
 } from '../../models';
-@Injectable()
-class FeedServiceMock {
-  getAllFeeds() {
-    return of(mockFeed);
-  }
-}
+import { HttpClientModule } from '@angular/common/http';
 
 export default {
   title: 'FeedContainerComponent',
@@ -34,18 +28,17 @@ export default {
         FeedFooterComponent,
         ButtonComponent,
       ],
+      imports: [HttpClientModule],
       providers: [
-        {
-          provide: FeedService,
-          useClass: FeedServiceMock,
-        },
+        Apollo,
+        FeedService,
         createStorybookApolloMock({
           mapper: (operation: Operation) => {
             switch (operation.operationName) {
-              case 'getAllPosts':
+              case 'allFeeds':
                 return {
                   data: {
-                    getAllPosts: mockFeed,
+                    allFeeds: mockFeed,
                   },
                 };
               default:
