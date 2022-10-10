@@ -13,6 +13,9 @@ $white: #ffffff;
       background-color: $primary-light;
     }
   }
+  &--block {
+    width: 100%;
+  }
   &[disabled] {
     background-color: $grey;
     border-color: $grey;
