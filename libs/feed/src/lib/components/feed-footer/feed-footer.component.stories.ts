@@ -10,13 +10,25 @@ export default {
       imports: [],
     }),
   ],
+  argTypes: {
+    metrics: {
+      name: 'metrics',
+      description: 'Sets feed social details metrics.',
+      control: {
+        type: 'object',
+      },
+      table: {
+        category: 'Inputs',
+      },
+    },
+  },
 } as Meta<FeedFooterComponent>;
 
 const Template: Story<FeedFooterComponent> = (args: FeedFooterComponent) => ({
   props: args,
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Metrics = Template.bind({});
+Metrics.args = {
   metrics: mockFeed[0].boostPostMetrics,
 };

@@ -17,6 +17,9 @@ export default {
       control: {
         type: 'text',
       },
+      table: {
+        category: 'Inputs',
+      },
     },
     isDisabled: {
       name: 'isDisabled',
@@ -24,12 +27,18 @@ export default {
       type: {
         name: 'boolean',
       },
+      table: {
+        category: 'Inputs',
+      },
     },
     isPrimary: {
       name: 'isPrimary',
       description: 'Whether the button is primary.',
       type: {
         name: 'boolean',
+      },
+      table: {
+        category: 'Inputs',
       },
     },
     isFullWidth: {
@@ -40,10 +49,16 @@ export default {
       type: {
         name: 'boolean',
       },
+      table: {
+        category: 'Inputs',
+      },
     },
     clicked: {
       description: 'Event that is emitted when an button is clicked.',
       action: 'clicked',
+      table: {
+        category: 'Outputs',
+      },
     },
   },
 } as Meta<ButtonComponent>;
@@ -64,15 +79,13 @@ Primary.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  label: 'Button',
+  ...Primary.args,
   isDisabled: true,
   isPrimary: false,
 };
 
 export const FullWidth = Template.bind({});
 FullWidth.args = {
-  label: 'Full Width Button',
-  isDisabled: false,
-  isPrimary: true,
+  ...Primary.args,
   isFullWidth: true,
 };

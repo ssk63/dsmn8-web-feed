@@ -20,6 +20,9 @@ export default {
       control: {
         type: 'text',
       },
+      table: {
+        category: 'Inputs',
+      },
     },
     reshareButtonLabel: {
       name: 'reshareButtonLabel',
@@ -28,14 +31,23 @@ export default {
       control: {
         type: 'text',
       },
+      table: {
+        category: 'Inputs',
+      },
     },
     likesBtnClicked: {
       description: 'Event that is emitted when the like button is clicked.',
       action: 'likesBtnClicked',
+      table: {
+        category: 'Outputs',
+      },
     },
     reshareBtnClicked: {
       description: 'Event that is emitted when the reshare button is clicked.',
       action: 'reshareBtnClicked',
+      table: {
+        category: 'Outputs',
+      },
     },
   },
 } as Meta<FeedActionsComponent>;

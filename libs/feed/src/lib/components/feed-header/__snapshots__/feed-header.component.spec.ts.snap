@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedHeaderComponent should render header text when the text is exists 1`] = `
+<div
+  class="feed-header"
+>
+  <div
+    class="feed-header__details"
+  >
+    <h1>
+      Help promote DSMN8's post on Linkedin
+    </h1>
+  </div>
+  <p>
+     By liking and re-sharing this post, you can help boost the organic reach of the content 
+  </p>
+</div>
+`;
