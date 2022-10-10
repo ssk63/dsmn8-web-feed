@@ -10,17 +10,55 @@ export default {
       imports: [],
     }),
   ],
+  argTypes: {
+    name: {
+      name: 'name',
+      description: 'Sets the feed post title.',
+      control: {
+        type: 'text',
+      },
+      table: {
+        category: 'Inputs',
+      },
+    },
+    content: {
+      name: 'content',
+      description: 'Sets the feed post text.',
+      control: {
+        type: 'text',
+      },
+      table: {
+        category: 'Inputs',
+      },
+    },
+    imgUrl: {
+      name: 'imgUrl',
+      description: 'Sets the feed post image.',
+      control: {
+        type: 'text',
+      },
+      table: {
+        category: 'Inputs',
+      },
+    },
+  },
 } as Meta<FeedBodyComponent>;
 
-const Template: Story<FeedBodyComponent> = (
-  args: FeedBodyComponent
-) => ({
+const Template: Story<FeedBodyComponent> = (args: FeedBodyComponent) => ({
   props: args,
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const FeedTitle = Template.bind({});
+FeedTitle.args = {
   name: mockFeed[0].name,
+};
+
+export const FeedContent = Template.bind({});
+FeedContent.args = {
   content: mockFeed[0].content,
+};
+
+export const FeedImage = Template.bind({});
+FeedImage.args = {
   imgUrl: mockFeed[0].imgUrl,
 };

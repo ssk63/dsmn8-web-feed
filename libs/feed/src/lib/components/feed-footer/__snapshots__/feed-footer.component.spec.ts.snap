@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedFooterComponent should render feed-post social metrics when the metrics is exists 1`] = `
+<div
+  class="feed-footer"
+>
+  <p
+    class="views-count"
+  >
+     Audience size: 5307 
+  </p>
+  
+  <div
+    class="feed-footer__details"
+  >
+    <p
+      class="feed-footer__details-likes"
+    >
+       2 likes 
+    </p>
+    
+    
+  </div>
+</div>
+`;

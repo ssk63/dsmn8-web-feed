@@ -10,13 +10,23 @@ export default {
       imports: [],
     }),
   ],
+  argTypes: {
+    text: {
+      name: 'text',
+      description: 'Sets the header text.',
+      type: { name: 'string' },
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<FeedHeaderComponent>;
 
 const Template: Story<FeedHeaderComponent> = (args: FeedHeaderComponent) => ({
   props: args,
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const HeaderText = Template.bind({});
+HeaderText.args = {
   text: mockFeed[0].text,
 };
