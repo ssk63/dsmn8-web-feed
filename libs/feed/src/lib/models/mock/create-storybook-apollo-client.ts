@@ -34,14 +34,11 @@ export function createStorybookApolloMock(args: IArgs) {
       return of(response as any);
     };
 
-    console.log({ link });
-
     const links = [
       httpHeaders(),
       link,
-      httpLink.create({ uri: 'http://localhost:5000/', withCredentials: true }),
+      httpLink.create({ uri: 'http://localhost:5000/' }),
     ];
-    console.log({ links });
     return {
       link: ApolloLink.from(links),
       cache: new InMemoryCache(),

@@ -39,6 +39,7 @@ export const mockFeed: FeedEntity[] = [
     },
     imgUrl:
       'https://dsmn8.imgix.net/dsmn8/image/PcdTvyy0wRnhpaC5sCEjXbgca.jpeg?w=1200',
+    isShared: true,
   },
   {
     content: `LET ME SET THE SCENE
@@ -72,5 +73,6 @@ export const mockFeed: FeedEntity[] = [
     },
     imgUrl:
       'https://dsmn8.imgix.net/dsmn8/image/fAaQgnEdem12gnQcujVX0g53V.jpeg?w=1200',
+    isShared: false,
   },
 ];

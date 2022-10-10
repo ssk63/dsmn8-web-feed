@@ -21,10 +21,10 @@ export class FeedContainerComponent implements OnInit {
   }
 
   onLikesBtnClicked(feed: FeedEntity) {
-    console.log({ feed });
+    alert(`we are about to like ${feed.name}`);
   }
 
   onReshareBtnClicked(feed: FeedEntity) {
-    console.log({ feed });
+    alert(`we are about to share ${feed.name}`);
   }
 }
