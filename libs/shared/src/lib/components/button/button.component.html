@@ -2,6 +2,8 @@
   class="dsmn8-btn"
   [class.dsmn8-btn--primary]="isPrimary"
   [attr.aria-label]="ariaLabel"
+  [disabled]="isDisabled"
+  (click)="onBtnClick()"
   type="button"
   *ngIf="label"
 >
