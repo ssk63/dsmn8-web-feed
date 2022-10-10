@@ -35,7 +35,7 @@ export default {
     isFullWidth: {
       name: 'isFullWidth',
       description:
-        'If true, the button stretches to the full with of its container.',
+        'If true, the button stretches to the full width of its container.',
       defaultValue: false,
       type: {
         name: 'boolean',
@@ -59,12 +59,14 @@ export const Primary = Template.bind({});
 Primary.args = {
   label: 'Button',
   isPrimary: true,
+  isDisabled: false,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   label: 'Button',
   isDisabled: true,
+  isPrimary: false,
 };
 
 export const FullWidth = Template.bind({});
