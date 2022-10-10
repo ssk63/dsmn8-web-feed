@@ -19,4 +19,12 @@ export class FeedContainerComponent implements OnInit {
   ngOnInit(): void {
     this.feeds$ = this.feedService.getAllFeeds();
   }
+
+  onLikesBtnClicked(feed: FeedEntity) {
+    console.log({ feed });
+  }
+
+  onReshareBtnClicked(feed: FeedEntity) {
+    console.log({ feed });
+  }
 }
