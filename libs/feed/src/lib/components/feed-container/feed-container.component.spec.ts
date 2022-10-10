@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Apollo } from 'apollo-angular';
 import { FeedContainerComponent } from './feed-container.component';
 
 describe('FeedContainerComponent', () => {
@@ -8,6 +9,7 @@ describe('FeedContainerComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [FeedContainerComponent],
+      providers: [Apollo],
     }).compileComponents();
 
     fixture = TestBed.createComponent(FeedContainerComponent);

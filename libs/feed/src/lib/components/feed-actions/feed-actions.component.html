@@ -1,14 +1,18 @@
 <div class="feed-actions">
   <dsmn8-button
+    *ngIf="likesButtonLabel"
     class="feed-actions__likes-btn"
     [label]="likesButtonLabel"
     [isFullWidth]="true"
     [isPrimary]="true"
+    (click)="likesBtnClicked.emit($event)"
   ></dsmn8-button>
   <dsmn8-button
+    *ngIf="reshareButtonLabel"
     class="feed-actions__reshare-btn"
     [label]="reshareButtonLabel"
     [isFullWidth]="true"
     [isPrimary]="true"
+    (click)="reshareBtnClicked.emit($event)"
   ></dsmn8-button>
 </div>
