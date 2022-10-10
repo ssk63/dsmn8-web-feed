@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonComponent should render button when the label is exists 1`] = `
+<button
+  class="dsmn8-btn"
+  type="button"
+>
+   Like Button
+
+</button>
+`;
+
+exports[`ButtonComponent should render disabled button when the isDisabled is true 1`] = `
+<button
+  class="dsmn8-btn dsmn8-btn--primary"
+  disabled=""
+  type="button"
+>
+   Like Button
+
+</button>
+`;
+
+exports[`ButtonComponent should render fullWidth button when the isFullWidth is true 1`] = `
+<button
+  class="dsmn8-btn dsmn8-btn--primary dsmn8-btn--block"
+  type="button"
+>
+   Like Button
+
+</button>
+`;
+
+exports[`ButtonComponent should render primary button when the isPrimary is true 1`] = `
+<button
+  class="dsmn8-btn dsmn8-btn--primary"
+  type="button"
+>
+   Like Button
+
+</button>
+`;
