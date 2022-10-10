@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedActionsComponent should render likes button when the likesButtonLabel is exists 1`] = `
+<dsmn8-button
+  class="feed-actions__likes-btn"
+>
+  <button
+    class="dsmn8-btn dsmn8-btn--primary dsmn8-btn--block"
+    type="button"
+  >
+     Likes Button
+
+  </button>
+  
+</dsmn8-button>
+`;
+
+exports[`FeedActionsComponent should render reshare button when the reshareButtonLabel is exists 1`] = `
+<dsmn8-button
+  class="feed-actions__reshare-btn"
+>
+  <button
+    class="dsmn8-btn dsmn8-btn--primary dsmn8-btn--block"
+    type="button"
+  >
+     Likes Button
+
+  </button>
+  
+</dsmn8-button>
+`;

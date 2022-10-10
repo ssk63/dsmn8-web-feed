@@ -1,4 +1,10 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   selector: 'dsmn8-feed-actions',
@@ -9,4 +15,6 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 export class FeedActionsComponent {
   @Input() likesButtonLabel: string | undefined;
   @Input() reshareButtonLabel: string | undefined;
+  @Output() likesBtnClicked = new EventEmitter<Event>();
+  @Output() reshareBtnClicked = new EventEmitter<Event>();
 }
