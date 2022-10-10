@@ -12,7 +12,7 @@ export default {
   argTypes: {
     label: {
       name: 'label',
-      description: 'Button label',
+      description: 'Sets the button text.',
       type: { name: 'string', required: true },
       control: {
         type: 'text',
@@ -28,6 +28,15 @@ export default {
     isPrimary: {
       name: 'isPrimary',
       description: 'Whether the button is primary.',
+      type: {
+        name: 'boolean',
+      },
+    },
+    isFullWidth: {
+      name: 'isFullWidth',
+      description:
+        'If true, the button stretches to the full with of its container.',
+      defaultValue: false,
       type: {
         name: 'boolean',
       },
@@ -56,4 +65,12 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   label: 'Button',
   isDisabled: true,
+};
+
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  label: 'Full Width Button',
+  isDisabled: false,
+  isPrimary: true,
+  isFullWidth: true,
 };

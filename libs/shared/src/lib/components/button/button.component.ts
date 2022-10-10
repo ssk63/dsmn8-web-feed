@@ -17,6 +17,7 @@ export class ButtonComponent {
   @Input() ariaLabel: string | undefined;
   @Input() isPrimary: boolean | undefined;
   @Input() isDisabled: boolean | undefined;
+  @Input() isFullWidth = false;
   @Output() clicked = new EventEmitter<boolean>();
 
   onBtnClick(): void {
