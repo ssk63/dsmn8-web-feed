@@ -37,14 +37,11 @@ export function createStorybookApolloMock(args: IArgs) {
     const links = [
       httpHeaders(),
       link,
-      httpLink.create({ uri: 'http://localhost:5000/' }),
+      httpLink.create({ uri: 'http://local' }),
     ];
     return {
       link: ApolloLink.from(links),
       cache: new InMemoryCache(),
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-      },
       defaultOptions: {
         query: {
           fetchPolicy: 'no-cache',

@@ -1,7 +1,7 @@
 import { gql } from 'apollo-angular';
 
 export const GET_ALL_FEED = gql`
-  query {
+  query AllFeeds {
     allFeeds {
       id
       name
@@ -9,6 +9,8 @@ export const GET_ALL_FEED = gql`
       text
       boostPostMetrics
       imgUrl
+      isShared
+      __typename
     }
   }
 `;

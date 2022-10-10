@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs';
-import { FeedEntity, likeBtnLabel, reshareBtnLabel } from '../../models';
+import { Observable, tap } from 'rxjs';
+import { IFeed, likeBtnLabel, reshareBtnLabel } from '../../models';
 import { FeedService } from '../../services';
 
 @Component({
@@ -10,7 +10,7 @@ import { FeedService } from '../../services';
   encapsulation: ViewEncapsulation.None,
 })
 export class FeedContainerComponent implements OnInit {
-  feeds$: Observable<FeedEntity[]> | undefined;
+  feeds$: Observable<IFeed[]> | undefined;
   likesBtnLabel: string = likeBtnLabel;
   reshareBtnLabel: string = reshareBtnLabel;
 
@@ -20,11 +20,15 @@ export class FeedContainerComponent implements OnInit {
     this.feeds$ = this.feedService.getAllFeeds();
   }
 
-  onLikesBtnClicked(feed: FeedEntity) {
+  onLikesBtnClicked(feed: IFeed) {
     alert(`we are about to like ${feed.name}`);
   }
 
-  onReshareBtnClicked(feed: FeedEntity) {
+  onReshareBtnClicked(feed: IFeed) {
     alert(`we are about to share ${feed.name}`);
+  }
+
+  getShareBtnLabel(isShared: boolean): string {
+    return isShared ? reshareBtnLabel : 'Share on LinkedIn (5 pts)';
   }
 }

@@ -15,6 +15,7 @@ import {
   reshareBtnLabel,
 } from '../../models';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 export default {
   title: 'FeedContainerComponent',
@@ -28,14 +29,14 @@ export default {
         FeedFooterComponent,
         ButtonComponent,
       ],
-      imports: [HttpClientModule],
+      imports: [HttpClientModule, CommonModule],
       providers: [
         Apollo,
         FeedService,
         createStorybookApolloMock({
           mapper: (operation: Operation) => {
             switch (operation.operationName) {
-              case 'allFeeds':
+              case 'AllFeeds':
                 return {
                   data: {
                     allFeeds: mockFeed,
@@ -85,5 +86,5 @@ const Template: Story<FeedContainerComponent> = (
   props: args,
 });
 
-export const FeedPost = Template.bind({});
-FeedPost.args = {};
+export const Feed = Template.bind({});
+Feed.args = {};
