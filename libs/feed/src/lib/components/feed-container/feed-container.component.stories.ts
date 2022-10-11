@@ -1,55 +1,83 @@
-import { Operation } from '@apollo/client';
-import { Apollo } from 'apollo-angular';
-import { moduleMetadata, Story, Meta } from '@storybook/angular';
-import { FeedService } from '../../services';
-import { FeedActionsComponent } from '../feed-actions/feed-actions.component';
-import { FeedBodyComponent } from '../feed-body/feed-body.component';
-import { FeedFooterComponent } from '../feed-footer/feed-footer.component';
-import { FeedHeaderComponent } from '../feed-header/feed-header.component';
-import { FeedContainerComponent } from './feed-container.component';
-import { ButtonComponent } from '@dsmn8/shared';
 import {
-  createStorybookApolloMock,
-  mockFeed,
-  likeBtnLabel,
-  reshareBtnLabel,
-} from '../../models';
+  ApolloClientOptions,
+  ApolloLink,
+  createHttpLink,
+  InMemoryCache,
+} from '@apollo/client';
+import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { Apollo, ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
+import { HttpLink } from 'apollo-angular/http';
+import { ApolloTestingModule } from 'apollo-angular/testing';
+import { FeedService, GET_ALL_FEED } from '../../services';
+import { FeedContainerComponent } from './feed-container.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { likeBtnLabel, mockFeed, reshareBtnLabel } from '../../models';
+
+const uri = 'http://localhost:5000/';
+
+const createApollo = (httpLink: HttpLink): ApolloClientOptions<any> => {
+  return {
+    link: httpLink.create({ uri }),
+    cache: new InMemoryCache(),
+    defaultOptions: {
+      query: {
+        fetchPolicy: 'no-cache',
+      },
+    },
+  };
+};
 
 export default {
   title: 'FeedContainerComponent',
   component: FeedContainerComponent,
   decorators: [
     moduleMetadata({
-      declarations: [
-        FeedHeaderComponent,
-        FeedBodyComponent,
-        FeedActionsComponent,
-        FeedFooterComponent,
-        ButtonComponent,
+      imports: [
+        // HttpClientModule,
+        // HttpClientTestingModule,
+        // ApolloTestingModule,
+        ApolloModule,
       ],
-      imports: [HttpClientModule, CommonModule],
       providers: [
         Apollo,
         FeedService,
-        createStorybookApolloMock({
-          mapper: (operation: Operation) => {
-            switch (operation.operationName) {
-              case 'AllFeeds':
-                return {
-                  data: {
-                    allFeeds: mockFeed,
-                  },
-                };
-              default:
-                return null;
-            }
-          },
-        }),
+        // {
+        //   provide: APOLLO_OPTIONS,
+        //   useFactory: createApollo,
+        //   deps: [HttpLink],
+        // },
       ],
     }),
   ],
+  parameters: {
+    apolloClient: {
+      mocks: [
+        {
+          delay: 1e21,
+          request: {
+            query: GET_ALL_FEED,
+          },
+          result: {
+            data: {
+              allFeeds: mockFeed,
+            },
+          },
+        },
+      ],
+      link: ApolloLink.from([
+        createHttpLink({
+          uri,
+        }),
+      ]),
+      cache: new InMemoryCache(),
+      defaultOptions: {
+        query: {
+          fetchPolicy: 'no-cache',
+        },
+      },
+    },
+  },
   argTypes: {
     likesBtnLabel: {
       name: 'likesBtnLabel',
