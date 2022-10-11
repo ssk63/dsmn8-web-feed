@@ -15,6 +15,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-actions',
   ],
+  staticDirs: ['../../../public'],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js
     if (rootMain.webpackFinal) {
