@@ -2,7 +2,8 @@
   <div class="feed-item" *ngFor="let feed of feeds$ | async">
     <dsmn8-feed-header [text]="feed?.text"></dsmn8-feed-header>
     <dsmn8-feed-actions
-      [likesButtonLabel]="likesBtnLabel"
+      [likesButtonLabel]="getLikeBtnLabel(feed.isLiked)"
+      [isLiked]="feed.isLiked"
       [reshareButtonLabel]="getShareBtnLabel(feed.isShared)"
       (likesBtnClicked)="onLikesBtnClicked(feed)"
       (reshareBtnClicked)="onReshareBtnClicked(feed)"
@@ -11,6 +12,7 @@
       [name]="feed?.name"
       [content]="feed?.content"
       [imgUrl]="feed?.imgUrl"
+      [videoUrl]="feed?.videoUrl"
     ></dsmn8-feed-body>
     <dsmn8-feed-footer [metrics]="feed?.boostPostMetrics"></dsmn8-feed-footer>
   </div>

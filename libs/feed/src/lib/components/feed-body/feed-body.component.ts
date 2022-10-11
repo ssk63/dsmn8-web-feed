@@ -10,4 +10,5 @@ export class FeedBodyComponent {
   @Input() name: string | undefined;
   @Input() content: string | undefined;
   @Input() imgUrl: string | undefined;
+  @Input() videoUrl: string | undefined;
 }

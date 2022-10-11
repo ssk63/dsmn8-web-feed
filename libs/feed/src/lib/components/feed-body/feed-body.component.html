@@ -5,7 +5,7 @@
     </h3>
   </div>
   <div class="feed-body__content" *ngIf="content" [innerText]="content"></div>
-  <div class="feed-body__tags">
+  <!-- <div class="feed-body__tags">
     <a
       class="feed-body__tags-link"
       href="https://www.linkedin.com/"
@@ -30,11 +30,18 @@
       target="_blank"
       >#employeeinfluencers</a
     >
-  </div>
+  </div> -->
   <div class="feed-body__image" *ngIf="imgUrl">
     <img
       [attr.src]="imgUrl"
       alt="Europe's most active mechanical or industrial engineering professionals on social"
     />
+  </div>
+  <div class="feed-body__video" *ngIf="videoUrl">
+    <vg-player>
+      <video #media id="singleVideo" preload="auto" controls>
+        <source [attr.src]="videoUrl" type="video/mp4" />
+      </video>
+    </vg-player>
   </div>
 </div>
