@@ -16,7 +16,10 @@
         "tsConfig": "apps/web/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
-        "styles": ["apps/web/src/styles.scss"],
+        "styles": [
+          "node_modules/@videogular/ngx-videogular/fonts/videogular.css",
+          "apps/web/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {

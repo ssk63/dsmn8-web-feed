@@ -41,6 +41,16 @@ export default {
         category: 'Inputs',
       },
     },
+    videoUrl: {
+      name: 'videoUrl',
+      description: 'Sets the feed post video.',
+      control: {
+        type: 'text',
+      },
+      table: {
+        category: 'Inputs',
+      },
+    },
   },
 } as Meta<FeedBodyComponent>;
 
@@ -61,4 +71,9 @@ FeedContent.args = {
 export const FeedImage = Template.bind({});
 FeedImage.args = {
   imgUrl: mockFeed[0].imgUrl,
+};
+
+export const FeedVideo = Template.bind({});
+FeedVideo.args = {
+  videoUrl: mockFeed[3].videoUrl,
 };

@@ -1,6 +1,14 @@
 import { Apollo, ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { ApolloClientOptions, InMemoryCache } from '@apollo/client';
+import { HttpLink } from 'apollo-angular/http';
 import { graphql } from 'msw';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 import { FeedService, GET_ALL_FEED } from '../../services';
 import { FeedActionsComponent } from '../feed-actions/feed-actions.component';
 import { FeedBodyComponent } from '../feed-body/feed-body.component';
@@ -9,10 +17,6 @@ import { FeedHeaderComponent } from '../feed-header/feed-header.component';
 import { FeedContainerComponent } from './feed-container.component';
 import { ButtonComponent } from '@dsmn8/shared';
 import { mockFeed, likeBtnLabel, reshareBtnLabel } from '../../models';
-import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
-import { ApolloClientOptions, InMemoryCache } from '@apollo/client';
-import { HttpLink } from 'apollo-angular/http';
 
 const uri = 'http://localhost:5000/';
 
@@ -40,7 +44,15 @@ export default {
         FeedFooterComponent,
         ButtonComponent,
       ],
-      imports: [HttpClientModule, ApolloModule, CommonModule],
+      imports: [
+        HttpClientModule,
+        ApolloModule,
+        CommonModule,
+        VgCoreModule,
+        VgControlsModule,
+        VgOverlayPlayModule,
+        VgBufferingModule,
+      ],
       providers: [
         Apollo,
         FeedService,
@@ -60,6 +72,9 @@ export default {
       control: {
         type: 'text',
       },
+      table: {
+        category: 'Props',
+      },
     },
     reshareBtnLabel: {
       name: 'reshareBtnLabel',
@@ -68,29 +83,25 @@ export default {
       control: {
         type: 'text',
       },
+      table: {
+        category: 'Props',
+      },
     },
     onLikesBtnClicked: {
       description:
         'Perform the likes operation when the likes button is clicked.',
       action: 'onLikesBtnClicked',
+      table: {
+        category: 'fn',
+      },
     },
     onReshareBtnClicked: {
       description:
         'Perform the reshare operation when the reshare button is clicked.',
       action: 'onReshareBtnClicked',
-    },
-  },
-  parameters: {
-    msw: {
-      handlers: [
-        graphql.query(GET_ALL_FEED, (req, res, ctx) => {
-          return res(
-            ctx.data({
-              allFeeds: [{ ...mockFeed[0] }],
-            })
-          );
-        }),
-      ],
+      table: {
+        category: 'fn',
+      },
     },
   },
 } as Meta<FeedContainerComponent>;
@@ -101,5 +112,117 @@ const Template: Story<FeedContainerComponent> = (
   props: args,
 });
 
-export const Feed = Template.bind({});
-Feed.args = {};
+export const Feeds = Template.bind({});
+Feeds.args = {};
+Feeds.parameters = {
+  msw: {
+    handlers: [
+      graphql.query(GET_ALL_FEED, (req, res, ctx) => {
+        return res(
+          ctx.data({
+            allFeeds: mockFeed,
+          })
+        );
+      }),
+    ],
+  },
+};
+
+export const ImageFeeds = Template.bind({});
+ImageFeeds.args = {};
+ImageFeeds.parameters = {
+  msw: {
+    handlers: [
+      graphql.query(GET_ALL_FEED, (req, res, ctx) => {
+        return res(
+          ctx.data({
+            allFeeds: mockFeed.filter((feed) => !!feed.imgUrl),
+          })
+        );
+      }),
+    ],
+  },
+};
+
+export const VideoFeeds = Template.bind({});
+VideoFeeds.args = {};
+VideoFeeds.parameters = {
+  msw: {
+    handlers: [
+      graphql.query(GET_ALL_FEED, (req, res, ctx) => {
+        return res(
+          ctx.data({
+            allFeeds: mockFeed.filter((feed) => !!feed.videoUrl),
+          })
+        );
+      }),
+    ],
+  },
+};
+
+export const LikedFeeds = Template.bind({});
+LikedFeeds.args = {};
+LikedFeeds.parameters = {
+  msw: {
+    handlers: [
+      graphql.query(GET_ALL_FEED, (req, res, ctx) => {
+        return res(
+          ctx.data({
+            allFeeds: mockFeed.filter((feed) => !!feed.isLiked),
+          })
+        );
+      }),
+    ],
+  },
+  docs: {
+    hidden: false
+  }
+};
+
+export const WillLikeFeeds = Template.bind({});
+WillLikeFeeds.args = {};
+WillLikeFeeds.parameters = {
+  msw: {
+    handlers: [
+      graphql.query(GET_ALL_FEED, (req, res, ctx) => {
+        return res(
+          ctx.data({
+            allFeeds: mockFeed.filter((feed) => !feed.isLiked),
+          })
+        );
+      }),
+    ],
+  },
+};
+
+export const SharedFeeds = Template.bind({});
+SharedFeeds.args = {};
+SharedFeeds.parameters = {
+  msw: {
+    handlers: [
+      graphql.query(GET_ALL_FEED, (req, res, ctx) => {
+        return res(
+          ctx.data({
+            allFeeds: mockFeed.filter((feed) => !!feed.isShared),
+          })
+        );
+      }),
+    ],
+  },
+};
+
+export const WillShareFeeds = Template.bind({});
+WillShareFeeds.args = {};
+WillShareFeeds.parameters = {
+  msw: {
+    handlers: [
+      graphql.query(GET_ALL_FEED, (req, res, ctx) => {
+        return res(
+          ctx.data({
+            allFeeds: mockFeed.filter((feed) => !feed.isShared),
+          })
+        );
+      }),
+    ],
+  },
+};

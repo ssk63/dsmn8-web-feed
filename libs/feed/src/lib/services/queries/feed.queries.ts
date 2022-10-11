@@ -9,7 +9,9 @@ export const GET_ALL_FEED = gql`
       text
       boostPostMetrics
       imgUrl
+      videoUrl
       isShared
+      isLiked
       __typename
     }
   }

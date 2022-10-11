@@ -24,6 +24,17 @@ export default {
         category: 'Inputs',
       },
     },
+    isLiked: {
+      name: 'isLiked',
+      description: 'Sets the like button enable and disable',
+      type: { name: 'boolean', required: true },
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        category: 'Inputs',
+      },
+    },
     reshareButtonLabel: {
       name: 'reshareButtonLabel',
       description: 'Sets the reshare button text.',
@@ -60,4 +71,5 @@ export const FeedActions = Template.bind({});
 FeedActions.args = {
   likesButtonLabel: likeBtnLabel,
   reshareButtonLabel: reshareBtnLabel,
+  isLiked: false
 };

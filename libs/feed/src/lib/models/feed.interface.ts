@@ -5,8 +5,10 @@ export interface IFeed {
   content: string;
   text: string;
   boostPostMetrics: IMetrics;
-  imgUrl: string;
+  imgUrl?: string;
+  videoUrl?: string;
   isShared: boolean;
+  isLiked: boolean;
 }
 
 export interface IMetrics {

@@ -14,6 +14,7 @@ import {
 })
 export class FeedActionsComponent {
   @Input() likesButtonLabel: string | undefined;
+  @Input() isLiked: boolean | undefined;
   @Input() reshareButtonLabel: string | undefined;
   @Output() likesBtnClicked = new EventEmitter<Event>();
   @Output() reshareBtnClicked = new EventEmitter<Event>();

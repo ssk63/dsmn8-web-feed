@@ -3,6 +3,7 @@
     *ngIf="likesButtonLabel"
     class="feed-actions__likes-btn"
     [label]="likesButtonLabel"
+    [isDisabled]="isLiked"
     [isFullWidth]="true"
     [isPrimary]="true"
     (click)="likesBtnClicked.emit($event)"
