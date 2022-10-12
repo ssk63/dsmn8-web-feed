@@ -1,7 +1,7 @@
 describe('feed', () => {
   beforeEach(() =>
     cy.visit(
-      '/iframe.html?id=feedbodycomponent--primary&args=name;content;imgUrl;'
+      '/iframe.html?id=feedbodycomponent--feed-content'
     )
   );
   it('should render the component', () => {

@@ -46,17 +46,22 @@ npm run graphql-server
 
 Navigate to http://localhost:5000/.
 
-**Example GraphQL allPosts query:**
+**Example GraphQL allFeeds query:**
 
 ```
-query {
-    allPosts {
+query AllFeeds {
+    allFeeds {
       id
       name
       content
       text
       boostPostMetrics
       imgUrl
+      videoUrl
+      isShared
+      isLiked
+      authorName @client
+      __typename
     }
   }
 ```
