@@ -12,6 +12,7 @@ export const GET_ALL_FEED = gql`
       videoUrl
       isShared
       isLiked
+      authorName @client
       __typename
     }
   }

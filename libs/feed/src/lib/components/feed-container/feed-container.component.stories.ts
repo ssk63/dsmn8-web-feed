@@ -26,7 +26,7 @@ const createApollo = (httpLink: HttpLink): ApolloClientOptions<any> => {
     cache: new InMemoryCache(),
     defaultOptions: {
       query: {
-        fetchPolicy: 'no-cache',
+        fetchPolicy: 'cache-first',
       },
     },
   };
@@ -175,8 +175,8 @@ LikedFeeds.parameters = {
     ],
   },
   docs: {
-    hidden: false
-  }
+    hidden: false,
+  },
 };
 
 export const WillLikeFeeds = Template.bind({});
