@@ -1,5 +1,6 @@
 <div class="feed">
   <div class="feed-item" *ngFor="let feed of feeds$ | async">
+    <pre>Author Name: {{ feed.authorName }}</pre>
     <dsmn8-feed-header [text]="feed?.text"></dsmn8-feed-header>
     <dsmn8-feed-actions
       [likesButtonLabel]="getLikeBtnLabel(feed.isLiked)"

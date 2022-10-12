@@ -2,6 +2,7 @@ import { IFeed } from './feed.interface';
 
 export const mockFeed: IFeed[] = [
   {
+    __typename: 'Feed',
     id: '9054896526',
     name: 'Why You SHOULD Limit Employee Advocacy [Podcast]',
     content:
@@ -16,9 +17,10 @@ export const mockFeed: IFeed[] = [
       'https://dsmn8.imgix.net/_scraper/13cf5006bf679afa7bee45831d7c974a.jpeg',
     isShared: false,
     isLiked: true,
-    __typename: 'Feed',
+    authorName: 'Sam',
   },
   {
+    __typename: 'Feed',
     id: '1664896526',
     name: 'DSMN8 - The Employee Influence Platform',
     content:
@@ -33,9 +35,10 @@ export const mockFeed: IFeed[] = [
       'https://dsmn8.imgix.net/_scraper/70e6aef7c8904cd6c841f3a9e39b5ef2.jpeg',
     isShared: false,
     isLiked: false,
-    __typename: 'Feed',
+    authorName: 'Sam',
   },
   {
+    __typename: 'Feed',
     id: '1664828526',
     name: 'DSMN8 - The Employee Influence Platform',
     content:
@@ -50,9 +53,10 @@ export const mockFeed: IFeed[] = [
       'https://dsmn8.imgix.net/dsmn8/image/UtADusGSQwcm1YgBvp3w5WJDr.jpeg?w=1200',
     isShared: true,
     isLiked: true,
-    __typename: 'Feed',
+    authorName: 'Sam',
   },
   {
+    __typename: 'Feed',
     id: '1664896116',
     name: 'DSMN8 - The Employee Influence Platform',
     content:
@@ -67,9 +71,10 @@ export const mockFeed: IFeed[] = [
       'https://prod-ugc-content-c37d5ec.s3-eu-west-2.amazonaws.com/ugc/fc51444137e0e36236f42c58f405a626/7376744159700336703381266/source.mp4',
     isShared: true,
     isLiked: false,
-    __typename: 'Feed',
+    authorName: 'Sam',
   },
   {
+    __typename: 'Feed',
     id: '1664896543',
     name: 'DSMN8 - The Employee Influence Platform',
     content:
@@ -84,9 +89,10 @@ export const mockFeed: IFeed[] = [
       'https://dsmn8.imgix.net/dsmn8/image/EqREgVWRUNw3YA06tNf5FHsrj.jpeg?w=1200',
     isShared: true,
     isLiked: false,
-    __typename: 'Feed',
+    authorName: 'Sam',
   },
   {
+    __typename: 'Feed',
     id: '1664834503',
     name: 'DSMN8 - The Employee Influence Platform',
     content:
@@ -101,9 +107,10 @@ export const mockFeed: IFeed[] = [
       'https://dsmn8.imgix.net/_scraper/2851cb2caa995dcb9a2a65282fa10744.jpeg',
     isShared: true,
     isLiked: true,
-    __typename: 'Feed',
+    authorName: 'Sam',
   },
   {
+    __typename: 'Feed',
     id: '1664885288',
     name: 'DSMN8 - The Employee Influence Platform',
     content:
@@ -118,6 +125,6 @@ export const mockFeed: IFeed[] = [
       'https://dsmn8.imgix.net/dsmn8/image/fAaQgnEdem12gnQcujVX0g53V.jpeg?w=1200',
     isShared: false,
     isLiked: false,
-    __typename: 'Feed',
+    authorName: 'Sam',
   },
 ];

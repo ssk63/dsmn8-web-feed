@@ -1,5 +1,5 @@
 export interface IFeed {
-  __typename: string;
+  __typename?: string;
   id: string | number;
   name: string;
   content: string;
@@ -9,6 +9,7 @@ export interface IFeed {
   videoUrl?: string;
   isShared: boolean;
   isLiked: boolean;
+  authorName?: string;
 }
 
 export interface IMetrics {

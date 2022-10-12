@@ -8,10 +8,22 @@ const uri = 'http://localhost:5000/';
 export const createApollo = (httpLink: HttpLink): ApolloClientOptions<any> => {
   return {
     link: httpLink.create({ uri }),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+      typePolicies: {
+        Feed: {
+          fields: {
+            authorName: {
+              read(_, { readField }) {
+                return 'David';
+              },
+            },
+          },
+        },
+      },
+    }),
     defaultOptions: {
       query: {
-        fetchPolicy: 'no-cache',
+        fetchPolicy: 'cache-first',
       },
     },
   };
