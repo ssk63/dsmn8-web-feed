@@ -5,7 +5,7 @@ import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 import { FeedService } from './services';
-import { ButtonComponent } from '@dsmn8/shared';
+import { SharedModule } from '@dsmn8/shared';
 import {
   FeedActionsComponent,
   FeedBodyComponent,
@@ -21,7 +21,6 @@ import {
     FeedBodyComponent,
     FeedActionsComponent,
     FeedFooterComponent,
-    ButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -29,6 +28,7 @@ import {
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
+    SharedModule
   ],
   exports: [FeedContainerComponent],
   providers: [FeedService],
