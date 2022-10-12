@@ -16,4 +16,4 @@ Run `nx run shared:storybook` to execute the storybook.
 
 ## Running Cypress E2E
 
-Run ` nx run shared-e2e:e2e --watch=true` to execute the storybook.
+Run ` nx run shared-e2e:e2e --watch=true` to execute the cypress e2e.
