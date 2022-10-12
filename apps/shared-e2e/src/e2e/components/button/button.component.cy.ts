@@ -1,7 +1,7 @@
 describe('shared', () => {
   it('should render the component', () => {
     cy.visit(
-      '/iframe.html?id=components-buttoncomponent--primary&args=label:Button;ariaLabel;isPrimary:true;isDisabled:false;isFullWidth:false;'
+      '/iframe.html?id=components-buttoncomponent--primary'
     );
     cy.get('dsmn8-button').should('exist');
   });
