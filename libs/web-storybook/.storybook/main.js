@@ -7,14 +7,14 @@ module.exports = {
 
   stories: [
     ...rootMain.stories,
-    '../../**/*.stories.mdx',
-    '../../**/*.stories.@(js|jsx|ts|tsx)',
+    '../../feed/**/*.stories.mdx',
+    '../../feed/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../shared/**/*.stories.mdx',
+    '../../shared/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../../apps/web/**/*.stories.mdx',
+    '../../../apps/web/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: [
-    ...rootMain.addons,
-    '@storybook/addon-a11y',
-    '@storybook/addon-actions',
-  ],
+  addons: [...rootMain.addons],
   staticDirs: ['../../../public'],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js

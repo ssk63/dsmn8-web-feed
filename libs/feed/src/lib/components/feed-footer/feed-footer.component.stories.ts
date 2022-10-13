@@ -3,7 +3,7 @@ import { mockFeed } from '../../models';
 import { FeedFooterComponent } from './feed-footer.component';
 
 export default {
-  title: 'FeedFooterComponent',
+  title: 'Pages/Feed/FeedFooterComponent',
   component: FeedFooterComponent,
   decorators: [
     moduleMetadata({

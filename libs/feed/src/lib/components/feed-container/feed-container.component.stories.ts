@@ -33,7 +33,7 @@ const createApollo = (httpLink: HttpLink): ApolloClientOptions<any> => {
 };
 
 export default {
-  title: 'FeedContainerComponent',
+  title: 'Pages/Feed/FeedContainerComponent',
   component: FeedContainerComponent,
   decorators: [
     moduleMetadata({

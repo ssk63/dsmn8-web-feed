@@ -3,7 +3,7 @@ import { mockFeed } from '../../models';
 import { FeedHeaderComponent } from './feed-header.component';
 
 export default {
-  title: 'FeedHeaderComponent',
+  title: 'Pages/Feed/FeedHeaderComponent',
   component: FeedHeaderComponent,
   decorators: [
     moduleMetadata({

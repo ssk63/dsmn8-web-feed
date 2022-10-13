@@ -3,7 +3,7 @@ import { mockFeed } from '../../models';
 import { FeedBodyComponent } from './feed-body.component';
 
 export default {
-  title: 'FeedBodyComponent',
+  title: 'Pages/Feed/FeedBodyComponent',
   component: FeedBodyComponent,
   decorators: [
     moduleMetadata({

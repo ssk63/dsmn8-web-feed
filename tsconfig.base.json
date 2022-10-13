@@ -17,7 +17,8 @@
     "paths": {
       "@dsmn8/feed": ["libs/feed/src/index.ts"],
       "@dsmn8/shared": ["libs/shared/src/index.ts"],
-      "@dsmn8/storybook": ["libs/storybook/src/index.ts"]
+      "@dsmn8/story-book": ["libs/story-book/src/index.ts"],
+      "@dsmn8/web-storybook": ["libs/web-storybook/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
