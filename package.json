@@ -43,6 +43,7 @@
     "@angular/cli": "~14.2.0",
     "@angular/compiler-cli": "~14.2.0",
     "@angular/language-service": "~14.2.0",
+    "@compodoc/compodoc": "^1.1.19",
     "@nrwl/cli": "14.8.2",
     "@nrwl/cypress": "14.8.2",
     "@nrwl/eslint-plugin-nx": "14.8.2",
