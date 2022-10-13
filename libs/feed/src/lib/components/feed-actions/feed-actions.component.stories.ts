@@ -4,7 +4,7 @@ import { likeBtnLabel, reshareBtnLabel } from '../../models';
 import { FeedActionsComponent } from './feed-actions.component';
 
 export default {
-  title: 'FeedActionsComponent',
+  title: 'Pages/Feed/FeedActionsComponent',
   component: FeedActionsComponent,
   decorators: [
     moduleMetadata({

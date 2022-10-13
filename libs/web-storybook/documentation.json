@@ -714,6 +714,16 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "apps/web/src/app/app.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "libs/shared/src/lib/components/button/button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -734,11 +744,51 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "apps/web/src/app/app.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<AppComponent>",
+                "defaultValue": "(args: AppComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/src/lib/components/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  props: {\n    ...args,\n    // clicked: action('log'),\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/feed/src/lib/components/feed-footer/feed-footer.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FeedFooterComponent>",
+                "defaultValue": "(args: FeedFooterComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "libs/feed/src/lib/components/feed-body/feed-body.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<FeedBodyComponent>",
                 "defaultValue": "(args: FeedBodyComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/feed/src/lib/components/feed-header/feed-header.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FeedHeaderComponent>",
+                "defaultValue": "(args: FeedHeaderComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -759,36 +809,6 @@
                 "deprecationMessage": "",
                 "type": "Story<FeedContainerComponent>",
                 "defaultValue": "(\n  args: FeedContainerComponent\n) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/feed/src/lib/components/feed-footer/feed-footer.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<FeedFooterComponent>",
-                "defaultValue": "(args: FeedFooterComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/feed/src/lib/components/feed-header/feed-header.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<FeedHeaderComponent>",
-                "defaultValue": "(args: FeedHeaderComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/src/lib/components/button/button.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  props: {\n    ...args,\n    // clicked: action('log'),\n  },\n})"
             },
             {
                 "name": "uri",
@@ -1096,6 +1116,28 @@
                     "type": "Story<FeedFooterComponent>",
                     "defaultValue": "(args: FeedFooterComponent) => ({\n  props: args,\n})"
                 }
+            ],
+            "apps/web/src/app/app.component.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/web/src/app/app.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/web/src/app/app.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<AppComponent>",
+                    "defaultValue": "(args: AppComponent) => ({\n  props: args,\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -1107,6 +1149,26 @@
         "count": 0,
         "status": "low",
         "files": [
+            {
+                "filePath": "apps/web/src/app/app.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/web/src/app/app.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
             {
                 "filePath": "libs/feed/src/lib/components/feed-actions/feed-actions.component.stories.ts",
                 "type": "variable",
