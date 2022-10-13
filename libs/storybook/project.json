@@ -1,18 +1,18 @@
 {
-  "name": "web-storybook",
+  "name": "storybook",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/web-storybook/src",
+  "sourceRoot": "libs/storybook/src",
   "prefix": "dsmn8",
   "targets": {
     "storybook": {
       "executor": "@storybook/angular:start-storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/web-storybook/.storybook",
-        "browserTarget": "web-storybook:build-storybook",
+        "configDir": "libs/storybook/.storybook",
+        "browserTarget": "storybook:build-storybook",
         "compodoc": true,
-        "compodocArgs": ["-e", "json", "-d", "libs/web-storybook"]
+        "compodocArgs": ["-e", "json", "-d", "libs/storybook"]
       },
       "configurations": {
         "ci": {
@@ -24,11 +24,11 @@
       "executor": "@storybook/angular:build-storybook",
       "outputs": ["{options.outputDir}"],
       "options": {
-        "outputDir": "dist/storybook/web-storybook",
-        "configDir": "libs/web-storybook/.storybook",
-        "browserTarget": "web-storybook:build-storybook",
+        "outputDir": "dist/storybook/storybook",
+        "configDir": "libs/storybook/.storybook",
+        "browserTarget": "storybook:build-storybook",
         "compodoc": true,
-        "compodocArgs": ["-e", "json", "-d", "libs/web-storybook"]
+        "compodocArgs": ["-e", "json", "-d", "libs/storybook"]
       },
       "configurations": {
         "ci": {
