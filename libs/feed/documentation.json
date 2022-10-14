@@ -630,21 +630,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/feed/src/lib/components/feed-actions/feed-actions.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<FeedActionsComponent>",
-                "defaultValue": "(args: FeedActionsComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "libs/feed/src/lib/components/feed-header/feed-header.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<FeedHeaderComponent>",
                 "defaultValue": "(args: FeedHeaderComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/feed/src/lib/components/feed-actions/feed-actions.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FeedActionsComponent>",
+                "defaultValue": "(args: FeedActionsComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "uri",

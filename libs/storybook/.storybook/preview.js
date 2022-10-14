@@ -1,5 +1,6 @@
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 import { setCompodocJson } from '@storybook/addon-docs/angular';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import docJson from '../documentation.json';
 
 setCompodocJson(docJson);
@@ -31,5 +32,8 @@ export const parameters = {
         value: '#3b5998',
       },
     ],
+  },
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
   },
 };
