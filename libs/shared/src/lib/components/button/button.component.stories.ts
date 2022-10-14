@@ -1,12 +1,15 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { withDesign } from 'storybook-addon-designs';
 import { ButtonComponent } from './button.component';
+import results from '../../../../.jest-test-results.json';
+import { withTests } from '@storybook/addon-jest';
 
 export default {
   title: 'Shared/Components/ButtonComponent',
   component: ButtonComponent,
   decorators: [
     withDesign,
+    withTests({ results }),
     moduleMetadata({
       imports: [],
     }),
@@ -63,6 +66,9 @@ export default {
       },
     },
   },
+  parameters: {
+    jest: 'button.component',
+  },
 } as Meta<ButtonComponent>;
 
 const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
@@ -107,15 +113,15 @@ FullWidth.args = {
 FullWidth.parameters = {
   design: [
     {
-      name: "Figma",
-      type: "figma",
-      url: "https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample",
+      name: 'Figma',
+      type: 'figma',
+      url: 'https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample',
       allowFullscreen: true,
     },
     {
-      name: "Link",
-      type: "link",
-      url: "https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample",
+      name: 'Link',
+      type: 'link',
+      url: 'https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample',
     },
   ],
 };

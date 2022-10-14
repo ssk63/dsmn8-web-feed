@@ -7,7 +7,7 @@ exports[`FeedFooterComponent should render feed-post social metrics when the met
   <p
     class="views-count"
   >
-     Audience size: 5307 
+     Audience size: 11382 
   </p>
   
   <div
@@ -16,7 +16,7 @@ exports[`FeedFooterComponent should render feed-post social metrics when the met
     <p
       class="feed-footer__details-likes"
     >
-       2 likes 
+       5 likes 
     </p>
     
     

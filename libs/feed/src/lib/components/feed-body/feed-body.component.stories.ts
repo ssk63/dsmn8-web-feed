@@ -1,11 +1,14 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { mockFeed } from '../../models';
 import { FeedBodyComponent } from './feed-body.component';
+import results from '../../../../.jest-test-results.json';
+import { withTests } from '@storybook/addon-jest';
 
 export default {
   title: 'Pages/Feed/FeedBodyComponent',
   component: FeedBodyComponent,
   decorators: [
+    withTests({ results }),
     moduleMetadata({
       imports: [],
     }),
@@ -52,6 +55,9 @@ export default {
       },
     },
   },
+  parameters: {
+    jest: 'feed-body.component',
+  }
 } as Meta<FeedBodyComponent>;
 
 const Template: Story<FeedBodyComponent> = (args: FeedBodyComponent) => ({

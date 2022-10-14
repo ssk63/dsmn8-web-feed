@@ -39,3 +39,4 @@ testem.log
 Thumbs.db
 
 .angular
+.jest-test-results.json

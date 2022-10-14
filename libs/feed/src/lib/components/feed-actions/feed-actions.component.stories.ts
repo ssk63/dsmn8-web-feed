@@ -2,11 +2,14 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { ButtonComponent } from '@dsmn8/shared';
 import { likeBtnLabel, reshareBtnLabel } from '../../models';
 import { FeedActionsComponent } from './feed-actions.component';
+import results from '../../../../.jest-test-results.json';
+import { withTests } from '@storybook/addon-jest';
 
 export default {
   title: 'Pages/Feed/FeedActionsComponent',
   component: FeedActionsComponent,
   decorators: [
+    withTests({ results }),
     moduleMetadata({
       imports: [],
       declarations: [ButtonComponent],
@@ -61,6 +64,9 @@ export default {
       },
     },
   },
+  parameters: {
+    jest: 'feed-actions.component',
+  },
 } as Meta<FeedActionsComponent>;
 
 const Template: Story<FeedActionsComponent> = (args: FeedActionsComponent) => ({
@@ -71,5 +77,5 @@ export const FeedActions = Template.bind({});
 FeedActions.args = {
   likesButtonLabel: likeBtnLabel,
   reshareButtonLabel: reshareBtnLabel,
-  isLiked: false
+  isLiked: false,
 };

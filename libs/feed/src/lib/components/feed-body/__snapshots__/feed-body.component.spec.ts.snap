@@ -13,38 +13,7 @@ exports[`FeedBodyComponent should render the feed content when the content is ex
     class="feed-body__content"
   />
   
-  <div
-    class="feed-body__tags"
-  >
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #marketing
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #marketingstrategy
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #employeeadvocacy
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #employeeinfluencers
-    </a>
-  </div>
+  
   
 </div>
 `;
@@ -60,45 +29,14 @@ exports[`FeedBodyComponent should render the feed image when the imgUrl is exist
   </div>
   
   <div
-    class="feed-body__tags"
-  >
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #marketing
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #marketingstrategy
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #employeeadvocacy
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #employeeinfluencers
-    </a>
-  </div>
-  <div
     class="feed-body__image"
   >
     <img
       alt="Europe's most active mechanical or industrial engineering professionals on social"
-      src="https://dsmn8.imgix.net/dsmn8/image/PcdTvyy0wRnhpaC5sCEjXbgca.jpeg?w=1200"
+      src="https://dsmn8.imgix.net/_scraper/13cf5006bf679afa7bee45831d7c974a.jpeg"
     />
   </div>
+  
   
 </div>
 `;
@@ -113,43 +51,12 @@ exports[`FeedBodyComponent should render the feed title when the name is exists 
     <h3
       class="feed-body__header-title"
     >
-       DSMN8 - The Employee Influence Platform 
+       Why You SHOULD Limit Employee Advocacy [Podcast] 
     </h3>
     
   </div>
   
-  <div
-    class="feed-body__tags"
-  >
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #marketing
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #marketingstrategy
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #employeeadvocacy
-    </a>
-    <a
-      class="feed-body__tags-link"
-      href="https://www.linkedin.com/"
-      target="_blank"
-    >
-      #employeeinfluencers
-    </a>
-  </div>
+  
   
 </div>
 `;

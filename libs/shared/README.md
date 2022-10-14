@@ -6,6 +6,10 @@ This library was generated with [Nx](https://nx.dev).
 
 Run `nx test shared` to execute the unit tests.
 
+## Running unit tests generate output
+
+Run `nx test shared --json --outputFile=libs/shared/.jest-test-results.json` to execute the unit tests.
+
 ## Running lint
 
 Run `nx lint shared` to execute the lint.
