@@ -11,7 +11,6 @@
     "../**/*.stories.jsx",
     "../**/*.stories.tsx",
     "../**/*.stories.mdx",
-    "*.js",
-    "../**/*.component.ts",
+    "*.js"
   ]
 }
