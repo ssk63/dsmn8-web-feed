@@ -7,12 +7,10 @@ module.exports = {
 
   stories: [
     ...rootMain.stories,
-    '../../feed/**/*.stories.mdx',
-    '../../feed/**/*.stories.@(js|jsx|ts|tsx)',
-    '../../shared/**/*.stories.mdx',
-    '../../shared/**/*.stories.@(js|jsx|ts|tsx)',
-    '../../../apps/web/**/*.stories.mdx',
-    '../../../apps/web/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../**/*.stories.mdx',
+    '../../**/*.stories.@(js|jsx|ts|tsx)',
+    '../../../**/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../../**/**/*.stories.mdx',
   ],
   addons: [...rootMain.addons],
   staticDirs: ['../../../public'],

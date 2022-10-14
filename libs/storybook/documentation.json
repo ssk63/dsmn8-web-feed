@@ -8,6 +8,46 @@
     "directives": [],
     "components": [
         {
+            "name": "AppComponent",
+            "id": "component-AppComponent-0020a05f5034a2a3cc576fc2f2af14f945c005d8a3bf47f10d96f8de15d8c6bc53f39d9efc82339a3b9dcb097221c1ddafd73510850db2b113a9c21631d5540d",
+            "file": "apps/web/src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "dsmn8-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'dsmn8-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n})\nexport class AppComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<dsmn8-feed-container></dsmn8-feed-container>"
+        },
+        {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-0b8aa04796c6fc1c32b026ef96a6da46b1bcace03f8f46e58d21b2b7f085ac92c9e0a9d91bd749839508a28d18fcdf73aea0a20862a4d72028b53a97da118160",
             "file": "libs/shared/src/lib/components/button/button.component.ts",
@@ -754,6 +794,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "libs/shared/src/lib/components/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  props: {\n    ...args,\n    // clicked: action('log'),\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "libs/feed/src/lib/components/feed-actions/feed-actions.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -784,16 +834,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/feed/src/lib/components/feed-header/feed-header.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<FeedHeaderComponent>",
-                "defaultValue": "(args: FeedHeaderComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "libs/feed/src/lib/components/feed-footer/feed-footer.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -804,11 +844,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/shared/src/lib/components/button/button.component.stories.ts",
+                "file": "libs/feed/src/lib/components/feed-header/feed-header.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  props: {\n    ...args,\n    // clicked: action('log'),\n  },\n})"
+                "type": "Story<FeedHeaderComponent>",
+                "defaultValue": "(args: FeedHeaderComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "uri",
@@ -1165,6 +1205,15 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/web/src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
