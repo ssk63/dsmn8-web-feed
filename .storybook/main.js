@@ -14,9 +14,9 @@ module.exports = {
     builder: 'webpack5',
   },
   refs: {
-    StoryBookDesignSystem: {
-      title: 'Design System',
+    Storybook: {
+      title: 'Storybook',
       url: 'https://5ccbc373887ca40020446347-yldsqjoxzb.chromatic.com',
-    }
+    },
   },
 };
