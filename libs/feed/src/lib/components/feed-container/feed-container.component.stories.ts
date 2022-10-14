@@ -2,6 +2,7 @@ import { Apollo, ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ApolloClientOptions, InMemoryCache } from '@apollo/client';
+import { withDesign } from 'storybook-addon-designs';
 import { HttpLink } from 'apollo-angular/http';
 import { graphql } from 'msw';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
@@ -36,6 +37,7 @@ export default {
   title: 'Pages/Feed/FeedContainerComponent',
   component: FeedContainerComponent,
   decorators: [
+    withDesign,
     moduleMetadata({
       declarations: [
         FeedHeaderComponent,
@@ -126,6 +128,17 @@ Feeds.parameters = {
       }),
     ],
   },
+};
+
+Feeds.parameters = {
+  design: [
+    {
+      name: 'Image',
+      type: 'image',
+      url: 'https://dsmn8.imgix.net/_scraper/13cf5006bf679afa7bee45831d7c974a.jpeg',
+      allowFullscreen: true,
+    },
+  ],
 };
 
 export const ImageFeeds = Template.bind({});
