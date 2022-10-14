@@ -1,10 +1,12 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { withDesign } from 'storybook-addon-designs';
 import { ButtonComponent } from './button.component';
 
 export default {
   title: 'Shared/Components/ButtonComponent',
   component: ButtonComponent,
   decorators: [
+    withDesign,
     moduleMetadata({
       imports: [],
     }),
@@ -76,6 +78,13 @@ Primary.args = {
   isPrimary: true,
   isDisabled: false,
 };
+Primary.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample',
+    allowFullscreen: true,
+  },
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -83,9 +92,30 @@ Disabled.args = {
   isDisabled: true,
   isPrimary: false,
 };
+Disabled.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/proto/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample',
+  },
+};
 
 export const FullWidth = Template.bind({});
 FullWidth.args = {
   ...Primary.args,
   isFullWidth: true,
+};
+FullWidth.parameters = {
+  design: [
+    {
+      name: "Figma",
+      type: "figma",
+      url: "https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample",
+      allowFullscreen: true,
+    },
+    {
+      name: "Link",
+      type: "link",
+      url: "https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample",
+    },
+  ],
 };

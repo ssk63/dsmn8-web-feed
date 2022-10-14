@@ -804,21 +804,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/feed/src/lib/components/feed-container/feed-container.component.stories.ts",
+                "file": "libs/feed/src/lib/components/feed-body/feed-body.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<FeedContainerComponent>",
-                "defaultValue": "(\n  args: FeedContainerComponent\n) => ({\n  props: args,\n})"
+                "type": "Story<FeedBodyComponent>",
+                "defaultValue": "(args: FeedBodyComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/feed/src/lib/components/feed-header/feed-header.component.stories.ts",
+                "file": "libs/feed/src/lib/components/feed-container/feed-container.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<FeedHeaderComponent>",
-                "defaultValue": "(args: FeedHeaderComponent) => ({\n  props: args,\n})"
+                "type": "Story<FeedContainerComponent>",
+                "defaultValue": "(\n  args: FeedContainerComponent\n) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -834,11 +834,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/feed/src/lib/components/feed-body/feed-body.component.stories.ts",
+                "file": "libs/feed/src/lib/components/feed-header/feed-header.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<FeedBodyComponent>",
-                "defaultValue": "(args: FeedBodyComponent) => ({\n  props: args,\n})"
+                "type": "Story<FeedHeaderComponent>",
+                "defaultValue": "(args: FeedHeaderComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
