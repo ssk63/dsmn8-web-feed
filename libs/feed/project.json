@@ -25,8 +25,7 @@
         "port": 4400,
         "configDir": "libs/feed/.storybook",
         "browserTarget": "feed:build-storybook",
-        "compodoc": true,
-        "compodocArgs": ["-e", "json", "-d", "libs/feed"]
+        "compodoc": false
       },
       "configurations": {
         "ci": {
@@ -41,8 +40,7 @@
         "outputDir": "dist/storybook/feed",
         "configDir": "libs/feed/.storybook",
         "browserTarget": "feed:build-storybook",
-        "compodoc": true,
-        "compodocArgs": ["-e", "json", "-d", "libs/feed"]
+        "compodoc": false
       },
       "configurations": {
         "ci": {

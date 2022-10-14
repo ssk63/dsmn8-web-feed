@@ -25,8 +25,7 @@
         "port": 4401,
         "configDir": "libs/shared/.storybook",
         "browserTarget": "shared:build-storybook",
-        "compodoc": true,
-        "compodocArgs": ["-e", "json", "-d", "libs/shared"]
+        "compodoc": false
       },
       "configurations": {
         "ci": {
@@ -41,8 +40,7 @@
         "outputDir": "dist/storybook/shared",
         "configDir": "libs/shared/.storybook",
         "browserTarget": "shared:build-storybook",
-        "compodoc": true,
-        "compodocArgs": ["-e", "json", "-d", "libs/shared"]
+        "compodoc": false
       },
       "configurations": {
         "ci": {

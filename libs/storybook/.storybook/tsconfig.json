@@ -11,13 +11,11 @@
     "../../**/*.stories.tsx",
     "../../**/*.stories.js",
     "../../**/*.stories.jsx",
-    "../../**/*.component.ts",
     "../../../**/**/*.stories.ts",
     "../../../**/**/*.stories.tsx",
     "../../../**/**/*.stories.js",
     "../../../**/**/*.stories.jsx",
     "../../../**/**/*.stories.mdx",
-    "../../../**/**/*.component.ts",
     "*.js"
   ]
 }

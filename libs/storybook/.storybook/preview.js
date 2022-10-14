@@ -1,9 +1,5 @@
 import { initialize, mswDecorator } from 'msw-storybook-addon';
-import { setCompodocJson } from '@storybook/addon-docs/angular';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import docJson from '../documentation.json';
-
-setCompodocJson(docJson);
 
 // Initialize MSW
 initialize();

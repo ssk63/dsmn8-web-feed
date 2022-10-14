@@ -11,8 +11,7 @@
         "port": 4400,
         "configDir": "libs/storybook/.storybook",
         "browserTarget": "storybook:build-storybook",
-        "compodoc": true,
-        "compodocArgs": ["-e", "json", "-d", "libs/storybook"]
+        "compodoc": false
       },
       "configurations": {
         "ci": {
@@ -27,8 +26,7 @@
         "outputDir": "dist/storybook/storybook",
         "configDir": "libs/storybook/.storybook",
         "browserTarget": "storybook:build-storybook",
-        "compodoc": true,
-        "compodocArgs": ["-e", "json", "-d", "libs/storybook"]
+        "compodoc": false
       },
       "configurations": {
         "ci": {

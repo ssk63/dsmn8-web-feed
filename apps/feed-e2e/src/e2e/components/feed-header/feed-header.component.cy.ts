@@ -1,6 +1,6 @@
 describe('feed', () => {
   it('should render the component', () => {
-    cy.visit('/iframe.html?id=feedheadercomponent--header-text&args=text;');
+    cy.visit('/iframe.html?id=pages-feed-feedheadercomponent--header-text&args=text;');
     cy.get('dsmn8-feed-header').should('exist');
   });
 
@@ -12,7 +12,7 @@ describe('feed', () => {
 
   it('should render the text', () => {
     cy.visit(
-      '/iframe.html?id=feedheadercomponent--header-text&args=text:By+liking+and+re-sharing+this+post+,+you+can+help+boost+the+organic+reach+of+the+content;'
+      '/iframe.html?id=pages-feed-feedheadercomponent--header-text&args=text:By+liking+and+re-sharing+this+post+,+you+can+help+boost+the+organic+reach+of+the+content;'
     );
     cy.get('.feed-header > p').contains(
       `By liking and re-sharing this post, you can help boost the organic reach of the content`
