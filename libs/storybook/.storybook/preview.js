@@ -1,5 +1,9 @@
 import { initialize, mswDecorator } from 'msw-storybook-addon';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import {
+  MINIMAL_VIEWPORTS,
+  INITIAL_VIEWPORTS,
+} from '@storybook/addon-viewport';
+import { darkTheme, lightTheme } from './dsmn8Theme';
 
 // Initialize MSW
 initialize();
@@ -9,7 +13,7 @@ export const decorators = [mswDecorator];
 
 export const parameters = {
   backgrounds: {
-    default: 'Dark',
+    default: 'Light',
     values: [
       {
         name: 'Light',
@@ -30,6 +34,13 @@ export const parameters = {
     ],
   },
   viewport: {
-    viewports: INITIAL_VIEWPORTS,
+    viewports: { ...MINIMAL_VIEWPORTS, ...INITIAL_VIEWPORTS },
+  },
+  darkMode: {
+    dark: darkTheme,
+    light: lightTheme,
+    stylePreview: true,
+    darkClass: 'd8-dark',
+    lightClass: 'd8-light',
   },
 };

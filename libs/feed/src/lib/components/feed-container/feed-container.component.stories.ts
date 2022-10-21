@@ -18,8 +18,6 @@ import { FeedHeaderComponent } from '../feed-header/feed-header.component';
 import { FeedContainerComponent } from './feed-container.component';
 import { ButtonComponent } from '@dsmn8/shared';
 import { mockFeed, likeBtnLabel, reshareBtnLabel } from '../../models';
-import results from '../../../../.jest-test-results.json';
-import { withTests } from '@storybook/addon-jest';
 
 const uri = 'http://localhost:5000/';
 
@@ -40,7 +38,6 @@ export default {
   component: FeedContainerComponent,
   decorators: [
     withDesign,
-    withTests({ results }),
     moduleMetadata({
       declarations: [
         FeedHeaderComponent,

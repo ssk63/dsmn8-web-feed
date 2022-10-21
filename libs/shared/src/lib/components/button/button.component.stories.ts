@@ -1,15 +1,12 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { withDesign } from 'storybook-addon-designs';
 import { ButtonComponent } from './button.component';
-import results from '../../../../.jest-test-results.json';
-import { withTests } from '@storybook/addon-jest';
 
 export default {
   title: 'Shared/Components/ButtonComponent',
   component: ButtonComponent,
   decorators: [
     withDesign,
-    withTests({ results }),
     moduleMetadata({
       imports: [],
     }),
